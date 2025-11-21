@@ -3,6 +3,7 @@
 
 #include "CLI/CLI.hpp"
 #include "config.h"
+#include "image.h"
 
 auto main(int argc, char **argv) -> int
 {
