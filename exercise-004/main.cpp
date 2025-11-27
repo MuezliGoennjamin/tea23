@@ -30,6 +30,14 @@ auto main(int argc, char **argv) -> int
     fmt::print("Hello, {}!\n", app.get_name());
 
     /* INSERT YOUR CODE HERE */
+    fmt::print("Größe des Arrays: {}\n", sizeof(image));
+
+    int image_size = sizeof(image);
+
+    // Byte-Array → Mat → Bild dekodieren
+    cv::Mat buffer(1, image_size, CV_8UC1, (void*)image);
+    cv::Mat matImg = cv::imdecode(buffer, cv::IMREAD_UNCHANGED);
+
 
 
     return 0; /* exit gracefully*/
