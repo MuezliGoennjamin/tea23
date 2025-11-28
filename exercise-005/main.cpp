@@ -14,7 +14,10 @@ auto main(int argc, char** argv) -> int
      */
     fmt::print("Hello, {}!\n", argv[0]);
 
-   
+   for (ListNode_t* n = GetNext(list, NULL); n != NULL; n = GetNext(list, n)) {
+    fmt::print("{} ", n->data);
+    }
+
 
     return 0; /* exit gracefully*/
 }

@@ -1,12 +1,12 @@
 #ifndef MY_FANCY_LINKED_LIST_H__
 #define MY_FANCY_LINKED_LIST_H__
 
-typedef struct ListNode {
+typedef struct ListNode {       /*Node Element für Elemente der Liste*/
     unsigned int data;
     struct ListNode* pNext;
 } ListNode_t;
 
-typedef struct List {
+typedef struct List {           /*markiert Anfang und Ende der Liste*/
     ListNode_t* pHead;
     ListNode_t* pTail;
     unsigned int size;
